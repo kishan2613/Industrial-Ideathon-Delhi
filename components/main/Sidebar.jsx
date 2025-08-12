@@ -12,11 +12,10 @@ import { Link, useLocation } from "react-router-dom";
 
 const SIDEBAR_ITEMS = [
   { name: "Dashboard", icon: LayoutDashboard, path: "/home/dashboard" },
-  { name: "Messages", icon: Mail, path: "/messages" },
-  { name: "Routes", icon: Map, path: "/routes" },
-  { name: "Schedule", icon: Calendar, path: "/schedule" },
-  { name: "Payments", icon: CreditCard, path: "/payments" },
-  { name: "Reports", icon: BarChart2, path: "/reports" },
+  { name: "Fleet Booking", icon: Mail, path: "/home/fleetbook" },
+  { name: "Live Tracking", icon: Map, path: "/home/livetracking" },
+  { name: "WareHouse slots", icon: Calendar, path: "/schedule" },
+  { name: "Inventory Upload", icon: CreditCard, path: "/payments" },
 ];
 
 export default function Sidebar() {
@@ -36,8 +35,8 @@ export default function Sidebar() {
       <div className="flex items-center px-6 py-2 gap-3">
         <div className="rounded-full w-9 h-9 bg-gray-100 flex items-center justify-center text-gray-400 text-xl font-bold">A</div>
         <div>
-          <div className="font-medium text-black text-sm">Alina Carter</div>
-          <div className="text-xs text-gray-400">alinacarter@mail.com</div>
+          <div className="font-medium text-black text-sm">Ramesh Gupta</div>
+          <div className="text-xs text-gray-400">Guptaramesh@gmail.com</div>
         </div>
       </div>
 
