@@ -8,6 +8,7 @@ import Track from "../pages/Livetrackings";
 
 import Report from "../pages/Report";
 import WarehouseSlots from "../pages/Slots";
+import Login from "../pages/Login";
 
 
 
@@ -17,7 +18,7 @@ function App() {
       <Routes>
         {/* Landing Page */}
         <Route path="/" element={<Landing />} />
-
+        <Route path="/login" element={<Login />} />
         {/* Main Layout with Sidebar */}
         <Route path="/home" element={<Main />}>
           <Route index element={<Navigate to="dashboard" />} />
@@ -27,7 +28,6 @@ function App() {
           <Route path="livetracking" element={<Track />} />       
           <Route path="slots" element={<WarehouseSlots />} />
           <Route path="reports" element={<Report />} />
-
         </Route>
 
     

@@ -1,5 +1,5 @@
 import React from "react";
-import { MapPin, Truck, Package } from "lucide-react";
+import {AlertTriangle, MapPin, Truck, Package } from "lucide-react";
 import { MapContainer, TileLayer, Marker, Popup, Polyline } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
@@ -61,23 +61,45 @@ export default function Track() {
               time="11:00 AM"
               active
             />
+            
             <TimelineStep
-              icon={<Truck className="w-6 h-6 text-blue-500" />}
-              title="In Transit"
-              desc="Heading towards Ghaziabad"
-              time="12:45 PM"
+                icon={<AlertTriangle className="w-6 h-6 text-red-500 animate-pulse" />}
+                title={
+                  <div className="flex items-center justify-between w-full">
+                    <span>Vehicle Stopped - Suspicious</span>
+                    <button
+                      className="ml-4 px-3 py-1 text-sm font-semibold text-white bg-red-500 hover:bg-red-600 rounded-lg shadow-md transition-all"
+                    >
+                      Report
+                    </button>
+                  </div>
+                }
+                desc="Heading towards Ghaziabad"
+                time="12:45 - 1:30 PM"
             />
+           
              <TimelineStep
               icon={<Truck className="w-6 h-6 text-blue-500" />}
               title="In Transit"
               desc="Heading towards Noida"
-              time="01:15 PM"
+              time={
+                <>
+                  <span className="line-through text-gray-400">1:15 PM</span>{" "}
+                  <span className="text-red-500 font-semibold">3:00 PM</span>
+                </>
+              }
+              
             />
             <TimelineStep
               icon={<Package className="w-6 h-6 text-gray-500" />}
               title="Out for Delivery"
-              desc="Expected by 3:00 PM"
-              time="—"
+              desc={
+                <>
+                  <span className="line-through text-gray-400">Expected by 3:00 PM</span>{" "}
+                  <span className="text-red-500 font-semibold">Expected by 6:00 PM</span>
+                </>
+              }
+              time=""
             />
           </div>
         </div>

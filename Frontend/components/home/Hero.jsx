@@ -50,7 +50,7 @@ const Hero = () => {
   const buttons = [
   {
     text: "Get Started",
-    onClick: () => navigate("/home"),
+    onClick: () => navigate("/login"),
     className:
       "bg-gradient-to-r from-gray-800 to-black text-white hover:shadow-md hover:shadow-gray-900/50",
     icon: (
