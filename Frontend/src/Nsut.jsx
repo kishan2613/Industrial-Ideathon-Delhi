@@ -5,7 +5,7 @@ import Dashboard from "../pages/Dashboard";
 
 import Fleet from "../pages/Fleets";
 import Track from "../pages/Livetrackings";
-
+import Guide from "./Guide";
 import Report from "../pages/Report";
 import WarehouseSlots from "../pages/Slots";
 import Login from "../pages/Login";
@@ -32,6 +32,8 @@ function App() {
 
     
       </Routes>
+       <Guide/>
+
     </Router>
   );
 }

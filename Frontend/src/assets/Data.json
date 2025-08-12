@@ -1,0 +1,456 @@
+{
+  "industrial_area_routes": [
+    {
+      "pair": {
+        "start": "Bawana Industrial Estate",
+        "end": "Narela Industrial Estate"
+      },
+      "routes": [
+        {
+          "route_id": 1,
+          "description": "via Old Delhi Road and Kanjhawala Road",
+          "total_distance_km": 12.5,
+          "average_time_hr": 0.75,
+          "predicted_time_hr": 0.82,
+          "traffic_signals": [
+            {"signal_id": 201, "vehicles": 140, "density": "high", "flow_per_min": 50, "red_light_duration_sec": 55},
+            {"signal_id": 202, "vehicles": 110, "density": "medium", "flow_per_min": 35, "red_light_duration_sec": 40},
+            {"signal_id": 203, "vehicles": 90, "density": "medium", "flow_per_min": 30, "red_light_duration_sec": 35}
+          ]
+        },
+        {
+          "route_id": 2,
+          "description": "via Rohtak Road and Udyog Nagar",
+          "total_distance_km": 14.0,
+          "average_time_hr": 0.85,
+          "predicted_time_hr": 0.92,
+          "traffic_signals": [
+            {"signal_id": 204, "vehicles": 120, "density": "medium", "flow_per_min": 40, "red_light_duration_sec": 45},
+            {"signal_id": 205, "vehicles": 100, "density": "medium", "flow_per_min": 33, "red_light_duration_sec": 38},
+            {"signal_id": 206, "vehicles": 110, "density": "high", "flow_per_min": 48, "red_light_duration_sec": 50}
+          ]
+        },
+        {
+          "route_id": 3,
+          "description": "via NH-1 and Outer Ring Road",
+          "total_distance_km": 15.5,
+          "average_time_hr": 0.9,
+          "predicted_time_hr": 1.0,
+          "traffic_signals": [
+            {"signal_id": 207, "vehicles": 150, "density": "high", "flow_per_min": 52, "red_light_duration_sec": 55},
+            {"signal_id": 208, "vehicles": 125, "density": "medium", "flow_per_min": 44, "red_light_duration_sec": 47},
+            {"signal_id": 209, "vehicles": 115, "density": "medium", "flow_per_min": 40, "red_light_duration_sec": 43},
+            {"signal_id": 210, "vehicles": 105, "density": "medium", "flow_per_min": 37, "red_light_duration_sec": 40}
+          ]
+        },
+        {
+          "route_id": 4,
+          "description": "via Sonipat Road and Bawana Road",
+          "total_distance_km": 16.8,
+          "average_time_hr": 1.05,
+          "predicted_time_hr": 1.15,
+          "traffic_signals": [
+            {"signal_id": 211, "vehicles": 135, "density": "medium", "flow_per_min": 47, "red_light_duration_sec": 49},
+            {"signal_id": 212, "vehicles": 120, "density": "medium", "flow_per_min": 42, "red_light_duration_sec": 45},
+            {"signal_id": 213, "vehicles": 110, "density": "medium", "flow_per_min": 38, "red_light_duration_sec": 41}
+          ]
+        }
+      ]
+    },
+    {
+      "pair": {
+        "start": "Karol Bagh",
+        "end": "Tilak Nagar Industrial Area"
+      },
+      "routes": [
+        {
+          "route_id": 1,
+          "description": "via Ring Road and Najafgarh Road",
+          "total_distance_km": 10.7,
+          "average_time_hr": 0.65,
+          "predicted_time_hr": 0.71,
+          "traffic_signals": [
+            {"signal_id": 301, "vehicles": 100, "density": "medium", "flow_per_min": 35, "red_light_duration_sec": 38},
+            {"signal_id": 302, "vehicles": 90, "density": "medium", "flow_per_min": 28, "red_light_duration_sec": 35},
+            {"signal_id": 303, "vehicles": 110, "density": "high", "flow_per_min": 40, "red_light_duration_sec": 45}
+          ]
+        },
+        {
+          "route_id": 2,
+          "description": "via Patel Road and Kirti Nagar",
+          "total_distance_km": 11.3,
+          "average_time_hr": 0.7,
+          "predicted_time_hr": 0.76,
+          "traffic_signals": [
+            {"signal_id": 304, "vehicles": 105, "density": "medium", "flow_per_min": 37, "red_light_duration_sec": 40},
+            {"signal_id": 305, "vehicles": 95, "density": "low", "flow_per_min": 26, "red_light_duration_sec": 30},
+            {"signal_id": 306, "vehicles": 115, "density": "medium", "flow_per_min": 38, "red_light_duration_sec": 42}
+          ]
+        },
+        {
+          "route_id": 3,
+          "description": "via Outer Ring Road and Punjabi Bagh",
+          "total_distance_km": 12.8,
+          "average_time_hr": 0.8,
+          "predicted_time_hr": 0.88,
+          "traffic_signals": [
+            {"signal_id": 307, "vehicles": 140, "density": "high", "flow_per_min": 49, "red_light_duration_sec": 52},
+            {"signal_id": 308, "vehicles": 125, "density": "medium", "flow_per_min": 44, "red_light_duration_sec": 46},
+            {"signal_id": 309, "vehicles": 110, "density": "medium", "flow_per_min": 38, "red_light_duration_sec": 41}
+          ]
+        }
+      ]
+    },
+    {
+      "pair": {
+        "start": "Okhla Industrial Area Phase I",
+        "end": "Mohan Co-op Industrial Area"
+      },
+      "routes": [
+        {
+          "route_id": 1,
+          "description": "via Mathura Road and Kalindi Kunj Road",
+          "total_distance_km": 8.2,
+          "average_time_hr": 0.55,
+          "predicted_time_hr": 0.62,
+          "traffic_signals": [
+            {"signal_id": 401, "vehicles": 160, "density": "high", "flow_per_min": 55, "red_light_duration_sec": 60},
+            {"signal_id": 402, "vehicles": 130, "density": "high", "flow_per_min": 45, "red_light_duration_sec": 48},
+            {"signal_id": 403, "vehicles": 105, "density": "medium", "flow_per_min": 38, "red_light_duration_sec": 40}
+          ]
+        },
+        {
+          "route_id": 2,
+          "description": "via Ring Road and Badarpur Road",
+          "total_distance_km": 9.5,
+          "average_time_hr": 0.6,
+          "predicted_time_hr": 0.68,
+          "traffic_signals": [
+            {"signal_id": 404, "vehicles": 145, "density": "high", "flow_per_min": 52, "red_light_duration_sec": 55},
+            {"signal_id": 405, "vehicles": 120, "density": "medium", "flow_per_min": 42, "red_light_duration_sec": 45},
+            {"signal_id": 406, "vehicles": 110, "density": "medium", "flow_per_min": 36, "red_light_duration_sec": 42}
+          ]
+        },
+        {
+          "route_id": 3,
+          "description": "via Outer Ring Road and Apollo Hospital Road",
+          "total_distance_km": 7.8,
+          "average_time_hr": 0.5,
+          "predicted_time_hr": 0.57,
+          "traffic_signals": [
+            {"signal_id": 407, "vehicles": 135, "density": "medium", "flow_per_min": 47, "red_light_duration_sec": 49},
+            {"signal_id": 408, "vehicles": 115, "density": "medium", "flow_per_min": 40, "red_light_duration_sec": 43}
+          ]
+        }
+      ]
+    },
+    {
+      "pair": {
+        "start": "Wazirpur Industrial Area",
+        "end": "Lawrence Road Industrial Area"
+      },
+      "routes": [
+        {
+          "route_id": 1,
+          "description": "via GT Karnal Road and Azadpur",
+          "total_distance_km": 6.8,
+          "average_time_hr": 0.45,
+          "predicted_time_hr": 0.52,
+          "traffic_signals": [
+            {"signal_id": 501, "vehicles": 125, "density": "medium", "flow_per_min": 43, "red_light_duration_sec": 46},
+            {"signal_id": 502, "vehicles": 95, "density": "medium", "flow_per_min": 32, "red_light_duration_sec": 38},
+            {"signal_id": 503, "vehicles": 85, "density": "low", "flow_per_min": 28, "red_light_duration_sec": 32}
+          ]
+        },
+        {
+          "route_id": 2,
+          "description": "via Ring Road and Model Town",
+          "total_distance_km": 7.5,
+          "average_time_hr": 0.5,
+          "predicted_time_hr": 0.57,
+          "traffic_signals": [
+            {"signal_id": 504, "vehicles": 135, "density": "high", "flow_per_min": 48, "red_light_duration_sec": 50},
+            {"signal_id": 505, "vehicles": 115, "density": "medium", "flow_per_min": 39, "red_light_duration_sec": 43},
+            {"signal_id": 506, "vehicles": 100, "density": "medium", "flow_per_min": 34, "red_light_duration_sec": 37}
+          ]
+        },
+        {
+          "route_id": 3,
+          "description": "via Outer Ring Road and Rani Bagh",
+          "total_distance_km": 8.9,
+          "average_time_hr": 0.58,
+          "predicted_time_hr": 0.66,
+          "traffic_signals": [
+            {"signal_id": 507, "vehicles": 150, "density": "high", "flow_per_min": 53, "red_light_duration_sec": 56},
+            {"signal_id": 508, "vehicles": 130, "density": "medium", "flow_per_min": 46, "red_light_duration_sec": 48},
+            {"signal_id": 509, "vehicles": 120, "density": "medium", "flow_per_min": 42, "red_light_duration_sec": 44},
+            {"signal_id": 510, "vehicles": 105, "density": "medium", "flow_per_min": 37, "red_light_duration_sec": 40}
+          ]
+        }
+      ]
+    },
+    {
+      "pair": {
+        "start": "Mayapuri Industrial Area",
+        "end": "Naraina Industrial Area"
+      },
+      "routes": [
+        {
+          "route_id": 1,
+          "description": "via Najafgarh Road direct",
+          "total_distance_km": 4.2,
+          "average_time_hr": 0.3,
+          "predicted_time_hr": 0.35,
+          "traffic_signals": [
+            {"signal_id": 601, "vehicles": 140, "density": "high", "flow_per_min": 50, "red_light_duration_sec": 52},
+            {"signal_id": 602, "vehicles": 120, "density": "medium", "flow_per_min": 42, "red_light_duration_sec": 45}
+          ]
+        },
+        {
+          "route_id": 2,
+          "description": "via Ring Road and Dhaula Kuan",
+          "total_distance_km": 5.8,
+          "average_time_hr": 0.4,
+          "predicted_time_hr": 0.47,
+          "traffic_signals": [
+            {"signal_id": 603, "vehicles": 165, "density": "high", "flow_per_min": 58, "red_light_duration_sec": 65},
+            {"signal_id": 604, "vehicles": 150, "density": "high", "flow_per_min": 53, "red_light_duration_sec": 58},
+            {"signal_id": 605, "vehicles": 125, "density": "medium", "flow_per_min": 44, "red_light_duration_sec": 47}
+          ]
+        }
+      ]
+    },
+    {
+      "pair": {
+        "start": "Shahdara Jhilmil Industrial Area",
+        "end": "Patparganj Industrial Area"
+      },
+      "routes": [
+        {
+          "route_id": 1,
+          "description": "via GT Road and Yamuna Bridge",
+          "total_distance_km": 15.3,
+          "average_time_hr": 0.95,
+          "predicted_time_hr": 1.05,
+          "traffic_signals": [
+            {"signal_id": 701, "vehicles": 180, "density": "high", "flow_per_min": 62, "red_light_duration_sec": 70},
+            {"signal_id": 702, "vehicles": 155, "density": "high", "flow_per_min": 55, "red_light_duration_sec": 60},
+            {"signal_id": 703, "vehicles": 130, "density": "medium", "flow_per_min": 46, "red_light_duration_sec": 48},
+            {"signal_id": 704, "vehicles": 125, "density": "medium", "flow_per_min": 43, "red_light_duration_sec": 45}
+          ]
+        },
+        {
+          "route_id": 2,
+          "description": "via Ring Road and ITO",
+          "total_distance_km": 17.8,
+          "average_time_hr": 1.1,
+          "predicted_time_hr": 1.22,
+          "traffic_signals": [
+            {"signal_id": 705, "vehicles": 170, "density": "high", "flow_per_min": 58, "red_light_duration_sec": 65},
+            {"signal_id": 706, "vehicles": 145, "density": "high", "flow_per_min": 51, "red_light_duration_sec": 55},
+            {"signal_id": 707, "vehicles": 135, "density": "medium", "flow_per_min": 47, "red_light_duration_sec": 50},
+            {"signal_id": 708, "vehicles": 120, "density": "medium", "flow_per_min": 41, "red_light_duration_sec": 44}
+          ]
+        }
+      ]
+    },
+    {
+      "pair": {
+        "start": "Anand Parbat Industrial Area",
+        "end": "Jhandewallan Flatted Factory"
+      },
+      "routes": [
+        {
+          "route_id": 1,
+          "description": "via Pusa Road and Karol Bagh",
+          "total_distance_km": 5.5,
+          "average_time_hr": 0.4,
+          "predicted_time_hr": 0.46,
+          "traffic_signals": [
+            {"signal_id": 801, "vehicles": 130, "density": "high", "flow_per_min": 46, "red_light_duration_sec": 48},
+            {"signal_id": 802, "vehicles": 115, "density": "medium", "flow_per_min": 40, "red_light_duration_sec": 43},
+            {"signal_id": 803, "vehicles": 105, "density": "medium", "flow_per_min": 36, "red_light_duration_sec": 40}
+          ]
+        },
+        {
+          "route_id": 2,
+          "description": "via Ring Road and Paharganj",
+          "total_distance_km": 6.2,
+          "average_time_hr": 0.45,
+          "predicted_time_hr": 0.52,
+          "traffic_signals": [
+            {"signal_id": 804, "vehicles": 145, "density": "high", "flow_per_min": 51, "red_light_duration_sec": 54},
+            {"signal_id": 805, "vehicles": 125, "density": "medium", "flow_per_min": 44, "red_light_duration_sec": 47},
+            {"signal_id": 806, "vehicles": 110, "density": "medium", "flow_per_min": 38, "red_light_duration_sec": 41}
+          ]
+        }
+      ]
+    },
+    {
+      "pair": {
+        "start": "Mangolpuri Industrial Area",
+        "end": "Udyog Nagar Rohtak Road"
+      },
+      "routes": [
+        {
+          "route_id": 1,
+          "description": "via Outer Ring Road and Rohtak Road",
+          "total_distance_km": 11.8,
+          "average_time_hr": 0.7,
+          "predicted_time_hr": 0.78,
+          "traffic_signals": [
+            {"signal_id": 901, "vehicles": 135, "density": "medium", "flow_per_min": 47, "red_light_duration_sec": 49},
+            {"signal_id": 902, "vehicles": 120, "density": "medium", "flow_per_min": 42, "red_light_duration_sec": 45},
+            {"signal_id": 903, "vehicles": 110, "density": "medium", "flow_per_min": 38, "red_light_duration_sec": 41},
+            {"signal_id": 904, "vehicles": 100, "density": "low", "flow_per_min": 34, "red_light_duration_sec": 37}
+          ]
+        },
+        {
+          "route_id": 2,
+          "description": "via Ring Road and Punjabi Bagh",
+          "total_distance_km": 13.5,
+          "average_time_hr": 0.8,
+          "predicted_time_hr": 0.89,
+          "traffic_signals": [
+            {"signal_id": 905, "vehicles": 150, "density": "high", "flow_per_min": 53, "red_light_duration_sec": 56},
+            {"signal_id": 906, "vehicles": 130, "density": "medium", "flow_per_min": 46, "red_light_duration_sec": 48},
+            {"signal_id": 907, "vehicles": 115, "density": "medium", "flow_per_min": 40, "red_light_duration_sec": 43},
+            {"signal_id": 908, "vehicles": 105, "density": "medium", "flow_per_min": 36, "red_light_duration_sec": 39}
+          ]
+        }
+      ]
+    },
+    {
+      "pair": {
+        "start": "Shahzada Bagh Industrial Area",
+        "end": "SSI Industrial Area G.T.K Road"
+      },
+      "routes": [
+        {
+          "route_id": 1,
+          "description": "via Ring Road and GT Karnal Road",
+          "total_distance_km": 16.2,
+          "average_time_hr": 1.0,
+          "predicted_time_hr": 1.12,
+          "traffic_signals": [
+            {"signal_id": 1001, "vehicles": 160, "density": "high", "flow_per_min": 56, "red_light_duration_sec": 60},
+            {"signal_id": 1002, "vehicles": 140, "density": "high", "flow_per_min": 49, "red_light_duration_sec": 52},
+            {"signal_id": 1003, "vehicles": 125, "density": "medium", "flow_per_min": 44, "red_light_duration_sec": 46},
+            {"signal_id": 1004, "vehicles": 115, "density": "medium", "flow_per_min": 40, "red_light_duration_sec": 42},
+            {"signal_id": 1005, "vehicles": 105, "density": "medium", "flow_per_min": 37, "red_light_duration_sec": 39}
+          ]
+        },
+        {
+          "route_id": 2,
+          "description": "via Outer Ring Road and Azadpur",
+          "total_distance_km": 18.5,
+          "average_time_hr": 1.15,
+          "predicted_time_hr": 1.28,
+          "traffic_signals": [
+            {"signal_id": 1006, "vehicles": 175, "density": "high", "flow_per_min": 61, "red_light_duration_sec": 65},
+            {"signal_id": 1007, "vehicles": 155, "density": "high", "flow_per_min": 54, "red_light_duration_sec": 58},
+            {"signal_id": 1008, "vehicles": 135, "density": "medium", "flow_per_min": 47, "red_light_duration_sec": 49},
+            {"signal_id": 1009, "vehicles": 120, "density": "medium", "flow_per_min": 42, "red_light_duration_sec": 44},
+            {"signal_id": 1010, "vehicles": 110, "density": "medium", "flow_per_min": 38, "red_light_duration_sec": 40}
+          ]
+        }
+      ]
+    },
+    {
+      "pair": {
+        "start": "Rajasthan Udyog Nagar G.T. K Road",
+        "end": "SMA Co-op Industrial Estate G.T. K Road"
+      },
+      "routes": [
+        {
+          "route_id": 1,
+          "description": "via GT Karnal Road direct",
+          "total_distance_km": 3.8,
+          "average_time_hr": 0.25,
+          "predicted_time_hr": 0.3,
+          "traffic_signals": [
+            {"signal_id": 1101, "vehicles": 95, "density": "medium", "flow_per_min": 33, "red_light_duration_sec": 36},
+            {"signal_id": 1102, "vehicles": 85, "density": "low", "flow_per_min": 29, "red_light_duration_sec": 32}
+          ]
+        },
+        {
+          "route_id": 2,
+          "description": "via Ring Road bypass",
+          "total_distance_km": 5.2,
+          "average_time_hr": 0.35,
+          "predicted_time_hr": 0.41,
+          "traffic_signals": [
+            {"signal_id": 1103, "vehicles": 125, "density": "medium", "flow_per_min": 44, "red_light_duration_sec": 46},
+            {"signal_id": 1104, "vehicles": 110, "density": "medium", "flow_per_min": 38, "red_light_duration_sec": 41},
+            {"signal_id": 1105, "vehicles": 100, "density": "medium", "flow_per_min": 35, "red_light_duration_sec": 38}
+          ]
+        }
+      ]
+    },
+    {
+      "pair": {
+        "start": "Kirti Nagar Industrial Area",
+        "end": "Najafgarh Road Industrial Area"
+      },
+      "routes": [
+        {
+          "route_id": 1,
+          "description": "via Ring Road and Najafgarh Road",
+          "total_distance_km": 8.5,
+          "average_time_hr": 0.55,
+          "predicted_time_hr": 0.62,
+          "traffic_signals": [
+            {"signal_id": 1201, "vehicles": 145, "density": "high", "flow_per_min": 51, "red_light_duration_sec": 54},
+            {"signal_id": 1202, "vehicles": 130, "density": "medium", "flow_per_min": 46, "red_light_duration_sec": 48},
+            {"signal_id": 1203, "vehicles": 115, "density": "medium", "flow_per_min": 40, "red_light_duration_sec": 42},
+            {"signal_id": 1204, "vehicles": 105, "density": "medium", "flow_per_min": 37, "red_light_duration_sec": 39}
+          ]
+        },
+        {
+          "route_id": 2,
+          "description": "via Patel Road and Janakpuri",
+          "total_distance_km": 9.8,
+          "average_time_hr": 0.65,
+          "predicted_time_hr": 0.73,
+          "traffic_signals": [
+            {"signal_id": 1205, "vehicles": 155, "density": "high", "flow_per_min": 54, "red_light_duration_sec": 57},
+            {"signal_id": 1206, "vehicles": 140, "density": "high", "flow_per_min": 49, "red_light_duration_sec": 52},
+            {"signal_id": 1207, "vehicles": 125, "density": "medium", "flow_per_min": 44, "red_light_duration_sec": 46},
+            {"signal_id": 1208, "vehicles": 110, "density": "medium", "flow_per_min": 38, "red_light_duration_sec": 41}
+          ]
+        }
+      ]
+    },
+    {
+      "pair": {
+        "start": "Okhla Industrial Area Phase II",
+        "end": "Okhla Industrial Area Phase III"
+      },
+      "routes": [
+        {
+          "route_id": 1,
+          "description": "via internal Okhla roads",
+          "total_distance_km": 2.5,
+          "average_time_hr": 0.2,
+          "predicted_time_hr": 0.25,
+          "traffic_signals": [
+            {"signal_id": 1301, "vehicles": 80, "density": "low", "flow_per_min": 28, "red_light_duration_sec": 30},
+            {"signal_id": 1302, "vehicles": 70, "density": "low", "flow_per_min": 24, "red_light_duration_sec": 28}
+          ]
+        },
+        {
+          "route_id": 2,
+          "description": "via Mathura Road bypass",
+          "total_distance_km": 4.1,
+          "average_time_hr": 0.3,
+          "predicted_time_hr": 0.36,
+          "traffic_signals": [
+            {"signal_id": 1303, "vehicles": 120, "density": "medium", "flow_per_min": 42, "red_light_duration_sec": 44},
+            {"signal_id": 1304, "vehicles": 105, "density": "medium", "flow_per_min": 37, "red_light_duration_sec": 39},
+            {"signal_id": 1305, "vehicles": 95, "density": "medium", "flow_per_min": 33, "red_light_duration_sec": 36}
+          ]
+        }
+      ]
+    }
+  ]
+}
