@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { MapPin, Clock, BarChart3, Navigation, X, Route } from "lucide-react";
+import { MapPin, Clock, BarChart3, Navigation, X, Route, Truck } from "lucide-react";
 import data from "../src/assets/Data.json";
-// Mock data for demonstration
- 
+import vehicleData from "../src/assets/vechleData.json";
 
+// Mock data for demonstration
 const pastelColors = [
   "rgba(134, 182, 255, 0.8)", // pastel blue
   "rgba(120, 211, 164, 0.8)", // pastel green  
@@ -21,13 +21,19 @@ export default function RouteSuggestion() {
   const [showAllModal, setShowAllModal] = useState(false);
   const [showBestModal, setShowBestModal] = useState(false);
   const [bestRoute, setBestRoute] = useState(null);
-
+  
+  // New states for vehicle search functionality
+  const [vehicleNumber, setVehicleNumber] = useState("");
+  const [showVehiclePopup, setShowVehiclePopup] = useState(false);
+  const [vehicleDetails, setVehicleDetails] = useState(null);
+  const [vehicleSearchError, setVehicleSearchError] = useState("");
+  
   // Sample areas for demonstration
   const allAreas = [
     "Bawana Industrial Estate",
     "Narela Industrial Estate",
     "Karol Bagh",
-    "Tilak Nagar Industrial Area",
+    "Tilak Nagar Industrial Area", 
     "Gurgaon Industrial Area",
     "Noida Industrial Area", 
     "Faridabad Industrial Complex",
@@ -64,7 +70,7 @@ export default function RouteSuggestion() {
       alert("Please select both start and destination industrial areas.");
       return;
     }
-     setShowInputs(false);
+    setShowInputs(false);
     // Using mock data for demonstration
     const match = data.industrial_area_routes.find(
       r => r.pair.start === start && r.pair.end === end
@@ -86,6 +92,52 @@ export default function RouteSuggestion() {
     , routes[0]);
     setBestRoute(best);
     setShowBestModal(true);
+  };
+
+  // New function to search for vehicle details
+  const searchVehicleDetails = () => {
+    if (!vehicleNumber.trim()) {
+      setVehicleSearchError("Please enter a vehicle number");
+      return;
+    }
+
+    if (!end) {
+      setVehicleSearchError("No destination selected");
+      return;
+    }
+
+    try {
+      // Search in the vehicleData for the destination
+      const destinationData = vehicleData.destinations[end];
+      
+      if (!destinationData) {
+        setVehicleSearchError("No vehicle data found for this destination");
+        return;
+      }
+
+      // Find the vehicle with matching number
+      const foundVehicle = destinationData.vehicles.find(
+        vehicle => vehicle.number.toLowerCase() === vehicleNumber.toLowerCase().trim()
+      );
+
+      if (foundVehicle) {
+        setVehicleDetails(foundVehicle);
+        setShowVehiclePopup(true);
+        setVehicleSearchError("");
+        setVehicleNumber(""); // Clear input after successful search
+      } else {
+        setVehicleSearchError(`Vehicle ${vehicleNumber} not found for destination ${end}`);
+      }
+    } catch (error) {
+      setVehicleSearchError("Error searching for vehicle details");
+      console.error("Vehicle search error:", error);
+    }
+  };
+
+  const closeVehiclePopup = () => {
+    setShowVehiclePopup(false);
+    setVehicleDetails(null);
+    setVehicleSearchError("");
   };
 
   const MetricCard = ({ title, value, icon: Icon, color }) => (
@@ -238,7 +290,6 @@ export default function RouteSuggestion() {
                 </button>
               </div>
             </div>
-
             <div className="p-6">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                 <MetricCard 
@@ -266,9 +317,7 @@ export default function RouteSuggestion() {
                   color="text-orange-500"
                 />
               </div>
-
               <RouteComparisonTable />
-
               <div className="flex justify-center mt-8">
                 <button
                   onClick={findBestRoute}
@@ -283,7 +332,7 @@ export default function RouteSuggestion() {
         </div>
       )}
 
-      {/* Best Route Modal - Horizontally Scrollable */}
+      {/* Best Route Modal - Updated with Vehicle Search */}
       {showBestModal && bestRoute && (
         <div className="fixed inset-0 flex items-center justify-center z-50 p-4" style={{ backgroundColor: "rgba(0,0,0,0.4)" }}>
           <div className="bg-white bg-opacity-95 backdrop-blur-lg rounded-2xl shadow-2xl w-full max-w-5xl max-h-[90vh] border border-white border-opacity-30">
@@ -301,7 +350,7 @@ export default function RouteSuggestion() {
                 </button>
               </div>
             </div>
-
+            
             <div className="p-6 overflow-auto max-h-[calc(90vh-120px)]">
               {/* Route Details */}
               <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6 mb-6 border border-green-200">
@@ -326,7 +375,7 @@ export default function RouteSuggestion() {
               </div>
 
               {/* Traffic Signals - Horizontally Scrollable */}
-              <div>
+              <div className="mb-6">
                 <h3 className="text-xl font-bold mb-4 text-gray-800">Traffic Signals Analysis</h3>
                 <div className="overflow-x-auto pb-4">
                   <div className="flex gap-6 min-w-max">
@@ -351,7 +400,7 @@ export default function RouteSuggestion() {
                               <div className="text-xs text-gray-600">Red Light</div>
                             </div>
                           </div>
-
+                          
                           {/* Simple visual bars */}
                           <div className="space-y-2">
                             <div className="flex items-center gap-2">
@@ -388,10 +437,166 @@ export default function RouteSuggestion() {
                   </div>
                 </div>
               </div>
+
+              {/* Vehicle Search Section - NEW */}
+              <div className="border-t border-gray-200 pt-6">
+                <h3 className="text-xl font-bold mb-4 text-gray-800 flex items-center gap-2">
+                  <Truck className="w-5 h-5 text-blue-500" />
+                  Vehicle Details Search
+                </h3>
+                
+                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200">
+                  <div className="flex flex-col sm:flex-row gap-4 items-end">
+                    <div className="flex-1">
+                      <label htmlFor="vehicleNumber" className="block text-sm font-medium text-gray-700 mb-2">
+                        Enter Vehicle Number
+                      </label>
+                      <input
+                        id="vehicleNumber"
+                        type="text"
+                        value={vehicleNumber}
+                        onChange={(e) => setVehicleNumber(e.target.value.toUpperCase())}
+                        placeholder="e.g., DL01AB1234"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all bg-white shadow-sm"
+                      />
+                    </div>
+                    <button
+                      onClick={searchVehicleDetails}
+                      disabled={!vehicleNumber.trim()}
+                      className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-2 transform hover:scale-105"
+                    >
+                      <Truck className="w-4 h-4" />
+                      Search Vehicle
+                    </button>
+                  </div>
+                  
+                  {vehicleSearchError && (
+                    <div className="mt-4 p-3 bg-red-100 border border-red-300 rounded-lg">
+                      <p className="text-red-700 text-sm font-medium">{vehicleSearchError}</p>
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </div>
       )}
+
+      {/* Vehicle Details Popup - NEW */}
+    {showVehiclePopup && vehicleDetails && (
+  <div className="fixed inset-0 flex items-center justify-center z-60 p-4" style={{ backgroundColor: "rgba(0,0,0,0.7)" }}>
+    <div className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl border border-gray-200 transform transition-all duration-300 scale-100 max-h-[90vh] overflow-y-auto">
+      {/* Header with gradient and close button */}
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 rounded-t-2xl sticky top-0 z-10">
+        <div className="flex justify-between items-center">
+          <h3 className="text-2xl font-bold flex items-center gap-3">
+            <Truck className="w-7 h-7" />
+            Vehicle Details
+          </h3>
+          <button
+            onClick={closeVehiclePopup}
+            className="p-2 hover:bg-white hover:bg-opacity-20 rounded-full transition-all duration-200 hover:rotate-90"
+            aria-label="Close popup"
+          >
+            <X className="w-6 h-6" />
+          </button>
+        </div>
+      </div>
+      
+      <div className="p-6 space-y-6">
+        {/* Width Validation Alert */}
+        {vehicleDetails.width > 5 && (
+          <div className="bg-red-50 border-l-4 border-red-500 rounded-lg p-4 shadow-sm">
+            <div className="flex items-start">
+              <div className="flex-shrink-0">
+                <svg className="h-5 w-5 text-red-400 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h4 className="text-red-800 font-semibold text-sm">Route Restriction Alert</h4>
+                <p className="text-red-700 text-sm mt-1">
+                  ⚠️ Your vehicle is not eligible to enter the destination bottleneck route. 
+                  Vehicle width ({vehicleDetails.width} {vehicleDetails.unit}) exceeds the maximum allowed width of 8 {vehicleDetails.unit}.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Vehicle Header Info */}
+        <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl p-5 border border-gray-200 shadow-sm">
+          <div className="flex items-center justify-between mb-3">
+            <h4 className="text-xl font-bold text-gray-800">{vehicleDetails.number}</h4>
+            <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold shadow-sm">
+              {vehicleDetails.type}
+            </span>
+          </div>
+          <p className="text-gray-600 font-medium text-lg">{vehicleDetails.model}</p>
+        </div>
+
+        {/* Vehicle Specifications */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className={`${vehicleDetails.width > 8 ? 'bg-red-50 border-red-200' : 'bg-green-50 border-green-200'} rounded-lg p-4 text-center border shadow-sm transition-all duration-200 hover:shadow-md`}>
+            <div className={`text-2xl font-bold ${vehicleDetails.width > 8 ? 'text-red-600' : 'text-green-600'}`}>
+              {vehicleDetails.width}
+            </div>
+            <div className="text-sm text-gray-600 font-medium">Width ({vehicleDetails.unit})</div>
+          </div>
+          <div className="bg-blue-50 rounded-lg p-4 text-center border border-blue-200 shadow-sm transition-all duration-200 hover:shadow-md">
+            <div className="text-2xl font-bold text-blue-600">{vehicleDetails.height}</div>
+            <div className="text-sm text-gray-600 font-medium">Height ({vehicleDetails.unit})</div>
+          </div>
+          <div className="bg-purple-50 rounded-lg p-4 text-center border border-purple-200 shadow-sm transition-all duration-200 hover:shadow-md">
+            <div className="text-2xl font-bold text-purple-600">{vehicleDetails.length}</div>
+            <div className="text-sm text-gray-600 font-medium">Length ({vehicleDetails.unit})</div>
+          </div>
+          <div className="bg-orange-50 rounded-lg p-4 text-center border border-orange-200 shadow-sm transition-all duration-200 hover:shadow-md">
+            <div className="text-2xl font-bold text-orange-600">{vehicleDetails.max_load}</div>
+            <div className="text-sm text-gray-600 font-medium">Max Load</div>
+          </div>
+        </div>
+
+        {/* Additional Info */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-gray-50 rounded-lg p-5 border border-gray-200 shadow-sm">
+            <h5 className="font-semibold text-gray-700 mb-3 text-lg">Weight & Axles</h5>
+            <div className="space-y-2">
+              <p className="text-gray-600">
+                Weight: <span className="font-semibold text-gray-800">{vehicleDetails.weight} {vehicleDetails.weight_unit}</span>
+              </p>
+              <p className="text-gray-600">
+                Axles: <span className="font-semibold text-gray-800">{vehicleDetails.axles}</span>
+              </p>
+            </div>
+          </div>
+          <div className="bg-gray-50 rounded-lg p-5 border border-gray-200 shadow-sm">
+            <h5 className="font-semibold text-gray-700 mb-3 text-lg">Destination</h5>
+            <p className="text-gray-800 font-semibold">{end}</p>
+          </div>
+        </div>
+
+        {/* Vehicle Details */}
+        <div className="bg-yellow-50 rounded-xl p-5 border border-yellow-200 shadow-sm">
+          <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2 text-lg">
+            📋 Additional Information
+          </h5>
+          <p className="text-gray-700 leading-relaxed">{vehicleDetails.details}</p>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="flex justify-center gap-4 pt-4">
+          <button
+            onClick={closeVehiclePopup}
+            className="px-8 py-3 bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 text-white font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+          >
+            Close Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
     </div>
   );
 }

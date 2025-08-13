@@ -1,0 +1,510 @@
+{
+  "destinations": {
+    "Bawana Industrial Estate": {
+      "vehicles": [
+        {
+          "number": "DL01AB1234",
+          "type": "Heavy Commercial Vehicle",
+          "model": "Taurus 25T",
+          "width": 7.8,
+          "height": 7.0,
+          "length": 28.0,
+          "weight": 25000,
+          "axles": 14,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "25 MT",
+          "details": "This is a 2021 Taurus 25T heavy commercial vehicle registered in Delhi. Suitable for industrial cargo transportation. Owner: Bawana Transport Co. Insurance valid till March 2026. Last service: January 2025. Specialized for heavy industrial equipment transport."
+        },
+        {
+          "number": "DL02CD5678",
+          "type": "Medium Commercial Vehicle",
+          "model": "Eicher 14 Feet",
+          "width": 6.0,
+          "height": 6.5,
+          "length": 14.0,
+          "weight": 4000,
+          "axles": 4,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "4 MT",
+          "details": "This is a 2020 Eicher 14 feet medium commercial vehicle registered in Delhi. Ideal for medium cargo loads. Owner: Industrial Logistics Ltd. Insurance valid till June 2025. Last service: February 2025. Equipped with hydraulic loading system."
+        },
+        {
+          "number": "DL03EF9012",
+          "type": "Small Carrier",
+          "model": "Tata Ace",
+          "width": 4.8,
+          "height": 4.8,
+          "length": 7.0,
+          "weight": 850,
+          "axles": 4,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "850 kg",
+          "details": "This is a 2022 Tata Ace small carrier vehicle registered in Delhi. Perfect for small deliveries and intra-city transport. Owner: Quick Delivery Services. Insurance valid till December 2025. Last service: March 2025. GPS tracking enabled."
+        }
+      ]
+    },
+    "Narela Industrial Estate": {
+      "vehicles": [
+        {
+          "number": "DL04GH3456",
+          "type": "Container Truck",
+          "model": "32 FT Container MXL",
+          "width": 8.0,
+          "height": 8.0,
+          "length": 32.0,
+          "weight": 18000,
+          "axles": 12,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "18 MT",
+          "details": "This is a 2019 32ft container truck registered in Delhi. Designed for containerized cargo transport. Owner: Narela Freight Solutions. Insurance valid till September 2025. Last service: January 2025. Temperature-controlled container available."
+        },
+        {
+          "number": "DL05IJ7890",
+          "type": "Platform Truck",
+          "model": "Platform Truck 22 Feet",
+          "width": 8.0,
+          "height": 7.0,
+          "length": 22.0,
+          "weight": 15000,
+          "axles": 8,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "15 MT",
+          "details": "This is a 2020 Platform truck 22 feet registered in Delhi. Open platform design for oversized cargo. Owner: Industrial Movers Pvt Ltd. Insurance valid till August 2025. Last service: February 2025. Crane loading facility available."
+        },
+        {
+          "number": "DL06KL1234",
+          "type": "Light Commercial Vehicle",
+          "model": "Mahindra Bolero Pickup",
+          "width": 4.8,
+          "height": 4.8,
+          "length": 8.0,
+          "weight": 1200,
+          "axles": 4,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "1.2 MT",
+          "details": "This is a 2021 Mahindra Bolero pickup registered in Delhi. Versatile pickup for medium loads. Owner: Narela Distribution Hub. Insurance valid till November 2025. Last service: March 2025. All-weather capability with 4WD option."
+        }
+      ]
+    },
+    "Karol Bagh": {
+      "vehicles": [
+        {
+          "number": "DL07MN5678",
+          "type": "Heavy Commercial Vehicle",
+          "model": "Taurus 21T",
+          "width": 7.3,
+          "height": 7.0,
+          "length": 24.0,
+          "weight": 21000,
+          "axles": 12,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "21 MT",
+          "details": "This is a 2020 Taurus 21T heavy commercial vehicle registered in Delhi. High-capacity cargo transport for commercial district deliveries. Owner: Karol Bagh Transport Services. Insurance valid till July 2025. Last service: January 2025. Specialized for textile and garment industry cargo."
+        },
+        {
+          "number": "DL08OP9012",
+          "type": "Medium Truck",
+          "model": "LPT 17 Feet",
+          "width": 6.8,
+          "height": 6.0,
+          "length": 17.0,
+          "weight": 5000,
+          "axles": 6,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "5 MT",
+          "details": "This is a 2019 LPT 17 feet medium truck registered in Delhi. Ideal for commercial area deliveries. Owner: Central Delhi Logistics. Insurance valid till October 2025. Last service: February 2025. Equipped with anti-theft security system."
+        },
+        {
+          "number": "DL09QR3456",
+          "type": "Small Commercial Vehicle",
+          "model": "Ashok Leyland Dost",
+          "width": 4.8,
+          "height": 4.8,
+          "length": 7.0,
+          "weight": 1000,
+          "axles": 4,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "1 MT",
+          "details": "This is a 2022 Ashok Leyland Dost registered in Delhi. Compact commercial vehicle for urban deliveries. Owner: Metro Delivery Solutions. Insurance valid till April 2026. Last service: March 2025. Fuel-efficient design with low maintenance costs."
+        }
+      ]
+    },
+    "Tilak Nagar Industrial Area": {
+      "vehicles": [
+        {
+          "number": "DL10ST7890",
+          "type": "Semi Trailer",
+          "model": "40 Feet Semi Trailer",
+          "width": 8.0,
+          "height": 7.0,
+          "length": 40.0,
+          "weight": 35000,
+          "axles": 16,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "35 MT",
+          "details": "This is a 2018 40 feet semi-trailer registered in Delhi. Heavy-duty trailer for industrial equipment transport. Owner: Tilak Nagar Heavy Haul Ltd. Insurance valid till May 2025. Last service: January 2025. Hydraulic suspension system for sensitive cargo."
+        },
+        {
+          "number": "DL11UV1234",
+          "type": "Container Truck",
+          "model": "20 FT Container",
+          "width": 8.0,
+          "height": 8.0,
+          "length": 20.0,
+          "weight": 6500,
+          "axles": 6,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "6.5 MT",
+          "details": "This is a 2021 20ft container truck registered in Delhi. Standard container for industrial goods transport. Owner: West Delhi Container Services. Insurance valid till December 2025. Last service: February 2025. ISO certified container with secure locking system."
+        },
+        {
+          "number": "DL12WX5678",
+          "type": "Light Commercial Vehicle",
+          "model": "Tata 407",
+          "width": 5.5,
+          "height": 5.0,
+          "length": 9.0,
+          "weight": 2500,
+          "axles": 4,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "2.5 MT",
+          "details": "This is a 2020 Tata 407 light commercial vehicle registered in Delhi. Versatile truck for medium cargo loads. Owner: Industrial Distribution Co. Insurance valid till September 2025. Last service: March 2025. Power steering and comfortable cabin design."
+        }
+      ]
+    },
+    "Gurgaon Industrial Area": {
+      "vehicles": [
+        {
+          "number": "HR13YZ9012",
+          "type": "Heavy Commercial Vehicle",
+          "model": "Taurus 25T HCV",
+          "width": 7.8,
+          "height": 7.0,
+          "length": 28.0,
+          "weight": 25000,
+          "axles": 14,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "25 MT",
+          "details": "This is a 2020 Taurus 25T heavy commercial vehicle registered in Haryana. Industrial grade transport for Gurgaon manufacturing sector. Owner: Millennium City Transport. Insurance valid till August 2025. Last service: January 2025. Advanced braking system for highway safety."
+        },
+        {
+          "number": "HR14AB3456",
+          "type": "High Bed Trailer",
+          "model": "40 Feet High Bed Trailer",
+          "width": 8.0,
+          "height": 7.0,
+          "length": 40.0,
+          "weight": 20000,
+          "axles": 12,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "20 MT",
+          "details": "This is a 2019 40 feet high bed trailer registered in Haryana. Specialized for machinery and equipment transport. Owner: Gurgaon Heavy Equipment Movers. Insurance valid till June 2025. Last service: February 2025. Hydraulic ramp system for easy loading."
+        },
+        {
+          "number": "HR15CD7890",
+          "type": "Small Commercial Vehicle",
+          "model": "SCV 5x12x6",
+          "width": 5.0,
+          "height": 6.0,
+          "length": 12.0,
+          "weight": 815,
+          "axles": 4,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "815 kg",
+          "details": "This is a 2022 Small Commercial Vehicle registered in Haryana. Compact carrier for local industrial deliveries. Owner: Cyber City Logistics. Insurance valid till January 2026. Last service: March 2025. Electric variant available for eco-friendly transport."
+        }
+      ]
+    },
+    "Noida Industrial Area": {
+      "vehicles": [
+        {
+          "number": "UP16EF1234",
+          "type": "Container Truck",
+          "model": "32 FT Container SXL",
+          "width": 8.0,
+          "height": 8.0,
+          "length": 32.0,
+          "weight": 7000,
+          "axles": 8,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "7 MT",
+          "details": "This is a 2021 32ft container SXL truck registered in Uttar Pradesh. Optimized for Noida's industrial sector transportation. Owner: UP Industrial Freight Co. Insurance valid till November 2025. Last service: February 2025. Real-time GPS tracking and temperature monitoring."
+        },
+        {
+          "number": "UP17GH5678",
+          "type": "Platform Truck",
+          "model": "Platform Truck 28 FT",
+          "width": 8.0,
+          "height": 7.0,
+          "length": 28.0,
+          "weight": 8000,
+          "axles": 8,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "8 MT",
+          "details": "This is a 2020 28ft platform truck registered in Uttar Pradesh. Open platform for versatile cargo handling. Owner: Noida Manufacturing Logistics. Insurance valid till July 2025. Last service: January 2025. Integrated crane system for heavy lifting operations."
+        },
+        {
+          "number": "UP18IJ9012",
+          "type": "Light Commercial Vehicle",
+          "model": "ICV 16x6.5x6.5",
+          "width": 6.5,
+          "height": 6.5,
+          "length": 16.0,
+          "weight": 3250,
+          "axles": 6,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "3.25 MT",
+          "details": "This is a 2021 Intermediate Commercial Vehicle registered in Uttar Pradesh. Mid-range capacity for industrial transport. Owner: Sector 63 Transport Hub. Insurance valid till October 2025. Last service: March 2025. Enhanced suspension for smooth cargo handling."
+        }
+      ]
+    },
+    "Faridabad Industrial Complex": {
+      "vehicles": [
+        {
+          "number": "HR19KL3456",
+          "type": "Heavy Trailer",
+          "model": "50 Feet Trailer",
+          "width": 8.0,
+          "height": 7.0,
+          "length": 50.0,
+          "weight": 35000,
+          "axles": 18,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "35 MT",
+          "details": "This is a 2019 50 feet heavy trailer registered in Haryana. Extra-long trailer for large industrial components. Owner: Faridabad Heavy Industries Transport. Insurance valid till April 2025. Last service: January 2025. Multi-axle configuration for weight distribution."
+        },
+        {
+          "number": "HR20MN7890",
+          "type": "Container Truck",
+          "model": "28 FT Container",
+          "width": 8.0,
+          "height": 8.0,
+          "length": 28.0,
+          "weight": 8000,
+          "axles": 8,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "8 MT",
+          "details": "This is a 2020 28ft container truck registered in Haryana. Mid-size container for industrial complex deliveries. Owner: NCR Industrial Movers. Insurance valid till August 2025. Last service: February 2025. Side-loading capability for restricted access areas."
+        },
+        {
+          "number": "HR21OP1234",
+          "type": "Medium Commercial Vehicle",
+          "model": "Canter 14 Feet",
+          "width": 6.4,
+          "height": 5.0,
+          "length": 14.0,
+          "weight": 3500,
+          "axles": 6,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "3.5 MT",
+          "details": "This is a 2021 Canter 14 feet registered in Haryana. Reliable medium capacity truck for regular industrial supplies. Owner: Ballabgarh Transport Services. Insurance valid till December 2025. Last service: March 2025. Air-conditioned cabin for driver comfort."
+        }
+      ]
+    },
+    "Manesar Industrial Area": {
+      "vehicles": [
+        {
+          "number": "HR22QR5678",
+          "type": "Heavy Commercial Vehicle",
+          "model": "Taurus 21T Multi-Axle",
+          "width": 7.3,
+          "height": 7.0,
+          "length": 24.0,
+          "weight": 21000,
+          "axles": 12,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "21 MT",
+          "details": "This is a 2020 Taurus 21T multi-axle heavy commercial vehicle registered in Haryana. Designed for automotive industry transportation in Manesar. Owner: Auto Zone Logistics Pvt Ltd. Insurance valid till June 2025. Last service: January 2025. Anti-roll stability system for safe cornering."
+        },
+        {
+          "number": "HR23ST9012",
+          "type": "Open All Side Trailer",
+          "model": "20 Feet ODC Trailer",
+          "width": 8.0,
+          "height": 8.0,
+          "length": 20.0,
+          "weight": 7000,
+          "axles": 8,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "7 MT",
+          "details": "This is a 2021 20 feet ODC (Over Dimensional Cargo) trailer registered in Haryana. Open design for oversized automotive components. Owner: Manesar Auto Parts Transport. Insurance valid till September 2025. Last service: February 2025. Hydraulic deck lowering system."
+        },
+        {
+          "number": "HR24UV3456",
+          "type": "Light Commercial Vehicle",
+          "model": "Tata 12 Feet",
+          "width": 6.4,
+          "height": 5.0,
+          "length": 12.0,
+          "weight": 3000,
+          "axles": 4,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "3 MT",
+          "details": "This is a 2022 Tata 12 feet light commercial vehicle registered in Haryana. Perfect for automotive parts distribution. Owner: IMT Manesar Logistics. Insurance valid till March 2026. Last service: March 2025. Reinforced cargo bay for automotive components."
+        }
+      ]
+    },
+    "Greater Noida Industrial Zone": {
+      "vehicles": [
+        {
+          "number": "UP25WX7890",
+          "type": "Container Truck",
+          "model": "32 FT Container HQ",
+          "width": 8.0,
+          "height": 10.0,
+          "length": 32.0,
+          "weight": 14000,
+          "axles": 10,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "14 MT",
+          "details": "This is a 2019 32ft high-cube container truck registered in Uttar Pradesh. Extra height container for voluminous cargo. Owner: Greater Noida Industrial Transport. Insurance valid till May 2025. Last service: January 2025. Climate-controlled container option available."
+        },
+        {
+          "number": "UP26YZ1234",
+          "type": "Platform Truck",
+          "model": "Platform Truck 20 Feet",
+          "width": 8.0,
+          "height": 7.0,
+          "length": 20.0,
+          "weight": 9000,
+          "axles": 6,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "9 MT",
+          "details": "This is a 2020 20 feet platform truck registered in Uttar Pradesh. Versatile platform for diverse industrial cargo. Owner: Yamuna Expressway Logistics. Insurance valid till October 2025. Last service: February 2025. Extendable platform for longer items."
+        },
+        {
+          "number": "UP27AB5678",
+          "type": "Small Carrier",
+          "model": "LCV 11x5x5",
+          "width": 5.0,
+          "height": 5.0,
+          "length": 11.0,
+          "weight": 2540,
+          "axles": 4,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "2.54 MT",
+          "details": "This is a 2022 Light Commercial Vehicle registered in Uttar Pradesh. Efficient small carrier for local industrial deliveries. Owner: Tech City Express Logistics. Insurance valid till January 2026. Last service: March 2025. Advanced telematics system for fleet management."
+        }
+      ]
+    },
+    "Okhla Industrial Estate": {
+      "vehicles": [
+        {
+          "number": "DL28CD9012",
+          "type": "Heavy Commercial Vehicle",
+          "model": "1109 19 Feet Heavy",
+          "width": 7.0,
+          "height": 7.0,
+          "length": 19.0,
+          "weight": 7000,
+          "axles": 8,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "7 MT",
+          "details": "This is a 2020 1109 19 feet heavy commercial vehicle registered in Delhi. Industrial-grade transport for South Delhi's manufacturing hub. Owner: Okhla Manufacturing Transport Co. Insurance valid till July 2025. Last service: January 2025. Noise reduction technology for urban operations."
+        },
+        {
+          "number": "DL29EF3456",
+          "type": "Container Truck",
+          "model": "24 FT Container",
+          "width": 8.0,
+          "height": 8.0,
+          "length": 24.0,
+          "weight": 8000,
+          "axles": 6,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "8 MT",
+          "details": "This is a 2021 24ft container truck registered in Delhi. Mid-range container for industrial estate logistics. Owner: South Delhi Container Services. Insurance valid till November 2025. Last service: February 2025. Electronic locking system with remote monitoring."
+        },
+        {
+          "number": "DL30GH7890",
+          "type": "Medium Commercial Vehicle",
+          "model": "LP Truck 18 Feet",
+          "width": 6.9,
+          "height": 7.0,
+          "length": 18.0,
+          "weight": 9000,
+          "axles": 6,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "9 MT",
+          "details": "This is a 2019 LP truck 18 feet registered in Delhi. Versatile medium truck for industrial applications. Owner: Ring Road Industrial Logistics. Insurance valid till April 2025. Last service: March 2025. Reinforced chassis for heavy-duty applications."
+        }
+      ]
+    },
+    "Mayapuri Industrial Area": {
+      "vehicles": [
+        {
+          "number": "DL31IJ1234",
+          "type": "Heavy Trailer",
+          "model": "Semi Trailer 40 FT",
+          "width": 8.0,
+          "height": 7.0,
+          "length": 40.0,
+          "weight": 30000,
+          "axles": 14,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "30 MT",
+          "details": "This is a 2018 40ft semi-trailer registered in Delhi. Heavy-duty trailer for industrial machinery transport. Owner: West Delhi Heavy Haul Services. Insurance valid till August 2025. Last service: January 2025. Air suspension system for sensitive equipment transport."
+        },
+        {
+          "number": "DL32KL5678",
+          "type": "Container Truck",
+          "model": "34 FT Container",
+          "width": 8.0,
+          "height": 8.0,
+          "length": 34.0,
+          "weight": 7000,
+          "axles": 8,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "7 MT",
+          "details": "This is a 2020 34ft container truck registered in Delhi. Extended length container for automotive parts and machinery. Owner: Mayapuri Auto Components Transport. Insurance valid till December 2025. Last service: February 2025. Partition walls for mixed cargo transport."
+        },
+        {
+          "number": "DL33MN9012",
+          "type": "Light Commercial Vehicle",
+          "model": "Eicher Pro 1049",
+          "width": 6.0,
+          "height": 6.0,
+          "length": 12.0,
+          "weight": 2500,
+          "axles": 4,
+          "unit": "feet",
+          "weight_unit": "kg",
+          "max_load": "2.5 MT",
+          "details": "This is a 2021 Eicher Pro 1049 light commercial vehicle registered in Delhi. Fuel-efficient truck for regular industrial supplies. Owner: Mayapuri Industrial Supplies. Insurance valid till June 2026. Last service: March 2025. Advanced driver assistance systems for urban safety."
+        }
+      ]
+    }
+  }
+}
