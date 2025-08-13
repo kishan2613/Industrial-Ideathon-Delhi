@@ -1,6 +1,8 @@
 import React from "react";
 import {AlertTriangle, MapPin, Truck, Package } from "lucide-react";
 import { MapContainer, TileLayer, Marker, Popup, Polyline } from "react-leaflet";
+import { useNavigate } from "react-router-dom";
+
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
@@ -15,6 +17,8 @@ L.Icon.Default.mergeOptions({
 export default function Track() {
   const start = [28.6519, 77.1907]; // Karol Bagh coords
   const end = [28.6692, 77.4538];   // Ghaziabad coords
+  const navigate = useNavigate();
+
 
   return (
     <div className=" min-h-screen">
@@ -115,9 +119,24 @@ export default function Track() {
             date="Today, 12:45 PM"
           />
           <ShipmentCard
-            title="Dwarka → Noida"
-            status="Delivered"
-            date="Yesterday, 3:15 PM"
+            title={
+                  <div className="flex items-center justify-between w-full">
+                    <span>Delhi-GuruGram</span>
+                   <button
+                    onClick={() => navigate("/home/slots")}
+                    className="ml-4 text-sm font-semibold text-white bg-red-500 hover:bg-red-600 rounded-lg shadow-md transition-all"
+                  >
+                    Check Nearby Warehouses
+                  </button>
+                  </div>
+                }
+            status={
+                <>
+                  <span className="line-through text-gray-400">Expected by 3:00 PM</span>{" "}
+                  <span className="text-red-500 font-semibold">Cancelled</span>
+                </>
+              }
+            date="3:15 PM"
           />
           <ShipmentCard
             title="Rohini → Gurugram"
